@@ -1,26 +1,151 @@
-@import "tailwindcss";
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --background: #fafafa;
+  --foreground: #09090b;
+  --accent: #10069F;
+  --muted: #6b6b7a;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #09090b;
+    --foreground: #fafafa;
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+html,
 body {
-  background: var(--background);
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Editorial / retro helpers */
+.hero-overlay {
+  background: linear-gradient(180deg, rgba(16,6,159,0.18), rgba(0,0,0,0.6));
+}
+.hero-accent-bar {
+  position: absolute;
+  left: 2.5%;
+  top: 18%;
+  bottom: 18%;
+  width: 6px;
+  background: var(--accent);
+  transform: skewY(-6deg);
+  border-radius: 2px;
+  z-index: 5;
+}
+.editorial-title {
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+.editorial-subtitle {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+::selection {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+@keyframes discospin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* sections padding */
+  .resp-section { padding: 60px 5% !important; }
+
+  .resp-label-row {
+    flex-wrap: wrap !important;
+    row-gap: 12px !important;
+  }
+
+  .resp-space-between-mobile {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  /* grilles → colonne unique */
+  .resp-grid-3 {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .resp-grid-2 {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  /* portfolio → 2 colonnes */
+  .resp-portfolio-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* cacher l'image déco zebra sur mobile */
+  .resp-hide-mobile { display: none !important; }
+
+  .resp-about-copy {
+    border-left: none !important;
+    border-top: 3px solid var(--accent) !important;
+    padding-left: 0 !important;
+    padding-top: 20px !important;
+  }
+
+  .resp-service-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  .resp-service-main {
+    width: 100% !important;
+    gap: 16px !important;
+    align-items: flex-start !important;
+  }
+
+  .resp-service-desc {
+    padding-left: 44px;
+  }
+
+  .resp-hero-bottom {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+
+  /* label header margin réduit */
+  .resp-label-mb { margin-bottom: 36px !important; }
 }
