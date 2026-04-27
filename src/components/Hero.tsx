@@ -40,7 +40,9 @@ export const Hero = () => {
           height: '100%',
           boxSizing: 'border-box',
           backgroundColor: '#080808',
-          backgroundImage: "url('https://leonie-moreau.designbykiara.com/DSC_1451.jpeg')",
+          backgroundImage: isMobile
+            ? "url('https://leonie-moreau.designbykiara.com/DSC_0501.jpeg')"
+            : "url('https://leonie-moreau.designbykiara.com/DSC_1451.jpeg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center top',
           display: 'flex',
