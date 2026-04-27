@@ -5,7 +5,7 @@ const config: OpenNextConfig = {
     override: {
       wrapper: "cloudflare-node",
       converter: "edge",
-      incrementalCache: async () => (await import("@opennextjs/cloudflare")).r2IncrementalCache,
+      incrementalCache: "dummy",
       tagCache: "dummy",
       queue: "dummy",
     },
