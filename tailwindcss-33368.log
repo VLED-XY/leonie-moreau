@@ -1,0 +1,54 @@
+2026-05-09T16:49:58.772556Z  INFO tailwindcss_oxide::scanner: Provided sources:
+2026-05-09T16:49:58.775315Z  INFO tailwindcss_oxide::scanner: Source: PublicSourceEntry { base: "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau", pattern: "**/*", negated: false }
+2026-05-09T16:49:58.779709Z  INFO tailwindcss_oxide::scanner: Optimized sources:
+2026-05-09T16:49:58.779816Z  INFO tailwindcss_oxide::scanner: Source: Auto { base: "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau" }
+2026-05-09T16:49:58.785284Z  INFO discover_sources: tailwindcss_oxide::scanner: enter
+2026-05-09T16:49:58.785875Z  INFO discover_sources:walk_synchronous: tailwindcss_oxide::scanner: enter
+2026-05-09T16:49:58.801458Z  INFO discover_sources:walk_synchronous: tailwindcss_oxide::scanner: exit
+2026-05-09T16:49:58.803001Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\AGENTS.md"
+2026-05-09T16:49:58.803270Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\CLAUDE.md"
+2026-05-09T16:49:58.803349Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\README.md"
+2026-05-09T16:49:58.803401Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\eslint.config.mjs"
+2026-05-09T16:49:58.803399Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\postcss.config.mjs"
+2026-05-09T16:49:58.803615Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\next.config.ts"
+2026-05-09T16:49:58.803725Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\scripts\\prepare-open-next.mjs"
+2026-05-09T16:49:58.803767Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\src\\components\\Hero.tsx"
+2026-05-09T16:49:58.803713Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\public\\file.svg"
+2026-05-09T16:49:58.803791Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\open-next.config.ts"
+2026-05-09T16:49:58.804003Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\public\\globe.svg"
+2026-05-09T16:49:58.804028Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\src\\app\\layout.tsx"
+2026-05-09T16:49:58.804052Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\src\\components\\Impressions.tsx"
+2026-05-09T16:49:58.804057Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\package.json"
+2026-05-09T16:49:58.804099Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\src\\components\\Services.tsx"
+2026-05-09T16:49:58.804147Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\public\\next.svg"
+2026-05-09T16:49:58.804324Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\src\\app\\page.tsx"
+2026-05-09T16:49:58.804457Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\public\\vercel.svg"
+2026-05-09T16:49:58.804470Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\tsconfig.json"
+2026-05-09T16:49:58.804465Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\src\\components\\Contact.tsx"
+2026-05-09T16:49:58.804499Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\src\\components\\Portfolio.tsx"
+2026-05-09T16:49:58.804600Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\public\\window.svg"
+2026-05-09T16:49:58.804636Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\wrangler.jsonc"
+2026-05-09T16:49:58.804839Z  INFO tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\src\\components\\About.tsx"
+2026-05-09T16:49:58.805012Z  INFO discover_sources: tailwindcss_oxide::scanner: exit
+2026-05-09T16:49:58.805058Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2026-05-09T16:49:58.805070Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2026-05-09T16:49:58.805084Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2026-05-09T16:49:58.806874Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2026-05-09T16:49:58.807201Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2026-05-09T16:49:58.807229Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2026-05-09T16:49:58.807239Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2026-05-09T16:49:58.808429Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "C:\\Users\\clara\\Desktop\\Projets VS Code\\Léonie Moreau\\src\\app\\globals.css"
+2026-05-09T16:49:58.808500Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2026-05-09T16:49:58.808546Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: enter
+2026-05-09T16:49:58.808559Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: enter
+2026-05-09T16:49:58.809905Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: exit
+2026-05-09T16:49:58.810099Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: exit
+2026-05-09T16:49:58.810434Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2026-05-09T16:49:58.811474Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2026-05-09T16:49:58.811541Z  INFO get_files:discover_sources: tailwindcss_oxide::scanner: enter
+2026-05-09T16:49:58.811555Z  INFO get_files:discover_sources: tailwindcss_oxide::scanner: exit
+2026-05-09T16:49:58.811857Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2026-05-09T16:49:58.812181Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2026-05-09T16:49:58.812210Z  INFO get_globs:discover_sources: tailwindcss_oxide::scanner: enter
+2026-05-09T16:49:58.812221Z  INFO get_globs:discover_sources: tailwindcss_oxide::scanner: exit
+2026-05-09T16:49:58.822646Z  INFO get_globs: tailwindcss_oxide::scanner: exit
