@@ -3,12 +3,12 @@ import React from 'react';
 const ACCENT = '#10069F';
 
 const services = [
-  { name: "Photoshoot", desc: "Portrait & mode" },
-  { name: "Éditorial", desc: "Direction artistique" },
-  { name: "Événements", desc: "Couverture complète" },
-  { name: "Mariages", desc: "Reportage du jour J" },
-  { name: "Polaroid Mannequinat", desc: "Booking & book" },
-  { name: "Photos LinkedIn", desc: "Portrait professionnel" },
+  { name: "Photo Shoot", desc: "Portrait & fashion" },
+  { name: "Editorial", desc: "Art direction" },
+  { name: "Events", desc: "Full coverage" },
+  { name: "Weddings", desc: "Wedding day coverage" },
+  { name: "Polaroid Modeling", desc: "Booking & book" },
+  { name: "LinkedIn Photos", desc: "Professional portrait" },
 ];
 
 export const Services = () => {

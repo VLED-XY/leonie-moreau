@@ -39,12 +39,7 @@ export const Hero = () => {
           width: isMobile ? '100%' : '48%',
           height: '100%',
           boxSizing: 'border-box',
-          backgroundColor: '#080808',
-          backgroundImage: isMobile
-            ? "url('https://leonie-moreau.designbykiara.com/DSC_0501.jpeg')"
-            : "url('https://leonie-moreau.designbykiara.com/DSC_1451.jpeg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center top',
+          backgroundColor: 'white',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'flex-end',
@@ -52,14 +47,6 @@ export const Hero = () => {
           zIndex: 2,
         }}
       >
-        {/* Overlay sombre pour lisibilite du texte */}
-        <div style={{
-          position: 'absolute',
-          inset: 0,
-          background: 'linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.3) 100%)',
-          zIndex: 0,
-        }} />
-
         {/* Bandeau bleu haut */}
         <motion.div
           initial={{ scaleX: 0 }}
@@ -93,17 +80,17 @@ export const Hero = () => {
           <span style={{
             width: '20px',
             height: '1px',
-            backgroundColor: 'rgba(255,255,255,0.25)',
+            backgroundColor: 'rgba(0,0,0,0.25)',
             display: 'inline-block',
           }} />
           <span style={{
-            color: 'rgba(255,255,255,0.4)',
+            color: 'rgba(0,0,0,0.45)',
             fontSize: '9px',
             letterSpacing: '0.35em',
             textTransform: 'uppercase' as const,
             fontWeight: 700,
           }}>
-            Photographe — Paris
+            Photographer — Paris
           </span>
         </motion.div>
 
@@ -134,7 +121,7 @@ export const Hero = () => {
             style={{
               fontSize: isMobile ? 'clamp(3.5rem, 20vw, 5.5rem)' : 'clamp(4.5rem, 8.5vw, 10rem)',
               fontWeight: 700,
-              color: 'white',
+              color: '#0a0a0a',
               letterSpacing: '-0.01em',
               textTransform: 'uppercase' as const,
               lineHeight: 0.9,
@@ -169,7 +156,7 @@ export const Hero = () => {
           style={{
             width: '100%',
             height: '1px',
-            backgroundColor: 'rgba(255,255,255,0.1)',
+            backgroundColor: 'rgba(0,0,0,0.1)',
             transformOrigin: 'left',
             marginBottom: isMobile ? '16px' : '24px',
             position: 'relative',
@@ -192,11 +179,11 @@ export const Hero = () => {
           }}
         >
           <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
-            {['Portrait', 'Éditorial', 'Événements'].map((s) => (
+            {['Portrait', 'Editorial', 'Events'].map((s) => (
               <span
                 key={s}
                 style={{
-                  color: 'rgba(255,255,255,0.35)',
+                  color: 'rgba(0,0,0,0.35)',
                   fontSize: '9px',
                   letterSpacing: '0.28em',
                   textTransform: 'uppercase' as const,
@@ -213,17 +200,17 @@ export const Hero = () => {
               display: 'flex',
               alignItems: 'center',
               gap: '10px',
-              color: 'white',
+              color: '#0a0a0a',
               textDecoration: 'none',
               fontSize: '10px',
               letterSpacing: '0.25em',
               textTransform: 'uppercase' as const,
               fontWeight: 700,
-              border: '1px solid rgba(255,255,255,0.2)',
+              border: '1px solid rgba(0,0,0,0.2)',
               padding: isMobile ? '10px 16px' : '12px 20px',
             }}
           >
-            Découvrir
+            Discover
           </a>
         </motion.div>
       </motion.div>
@@ -305,11 +292,10 @@ export const Hero = () => {
           top: isMobile ? '36%' : '50%',
           left: isMobile ? '50%' : '48%',
           transform: 'translate(-50%, -50%)',
-          width: isMobile ? '130px' : 'clamp(160px, 22vw, 320px)',
+          width: isMobile ? '90px' : 'clamp(100px, 13vw, 200px)',
           height: 'auto',
           zIndex: 10,
           pointerEvents: 'none',
-          filter: 'drop-shadow(0 0 40px rgba(180,160,255,0.55)) drop-shadow(0 0 80px rgba(16,6,159,0.4))',
           animation: 'discospin 18s linear infinite',
         }}
       />

@@ -2,8 +2,8 @@
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Léonie Moreau | Photographe",
-  description: "Photoshoot, événements, portraits",
+  title: "Léonie Moreau | Photographer",
+  description: "Photo shoots, events, portraits",
 };
 
 export const viewport: Viewport = {
@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="en">
       <body>
         {children}
       </body>

@@ -44,20 +44,20 @@ export const Contact = () => {
                 marginBottom: '32px',
               }}
             >
-              Travaillons<br />
-              <span style={{ color: ACCENT }}>ensemble.</span>
+              Let's work<br />
+              <span style={{ color: ACCENT }}>together.</span>
             </h2>
             <p style={{ fontSize: '1rem', lineHeight: 1.8, color: 'rgba(0,0,0,0.55)', fontWeight: 400 }}>
-              Parlez-moi de votre projet, je vous réponds dans les 48h.
+              Tell me about your project, I'll get back to you within 48h.
             </p>
           </div>
 
           {/* Formulaire */}
           <form style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
             {[
-              { id: 'nom', label: 'Nom', type: 'text', placeholder: 'Votre nom' },
-              { id: 'email', label: 'Email', type: 'email', placeholder: 'votre@email.com' },
-              { id: 'type', label: 'Type de séance', type: 'text', placeholder: 'Photoshoot, Événement…' },
+              { id: 'nom', label: 'Name', type: 'text', placeholder: 'Your name' },
+              { id: 'email', label: 'Email', type: 'email', placeholder: 'your@email.com' },
+              { id: 'type', label: 'Type of session', type: 'text', placeholder: 'Photo shoot, Event…' },
             ].map(({ id, label, type, placeholder }) => (
               <div key={id} style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 <label
@@ -92,7 +92,7 @@ export const Contact = () => {
               <textarea
                 id="message"
                 rows={4}
-                placeholder="Parlez-moi de votre projet"
+                placeholder="Tell me about your project"
                 style={{
                   background: 'transparent',
                   border: 'none',
@@ -124,7 +124,7 @@ export const Contact = () => {
                 alignSelf: 'flex-start',
               }}
             >
-              Envoyer
+              Send
             </button>
           </form>
         </div>

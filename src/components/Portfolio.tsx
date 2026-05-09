@@ -9,8 +9,8 @@ export const Portfolio = () => {
       className="resp-section"
       style={{
         width: '100%',
-        backgroundColor: '#0a0a0a',
-        color: 'white',
+        backgroundColor: '#ffffff',
+        color: '#0a0a0a',
         padding: '120px 5%',
         boxSizing: 'border-box',
       }}
@@ -21,10 +21,10 @@ export const Portfolio = () => {
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
             <span style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase' as const, color: ACCENT }}>04</span>
             <div style={{ height: '1px', width: '48px', backgroundColor: ACCENT }} />
-            <span style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.4)' }}>Portfolio</span>
+            <span style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase' as const, color: 'rgba(0,0,0,0.35)' }}>Portfolio</span>
           </div>
-          <span style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.35)', fontWeight: 700 }}>
-            Sélection
+          <span style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase' as const, color: 'rgba(0,0,0,0.35)', fontWeight: 700 }}>
+            Selection
           </span>
         </div>
 
@@ -39,7 +39,7 @@ export const Portfolio = () => {
             marginBottom: '64px',
           }}
         >
-          Mes<br />
+          My<br />
           <span style={{ color: ACCENT }}>Photos.</span>
         </h2>
 

@@ -9,8 +9,8 @@ export const About = () => {
       className="resp-section"
       style={{
         width: '100%',
-        backgroundColor: '#0a0a0a',
-        color: 'white',
+        backgroundColor: '#ffffff',
+        color: '#0a0a0a',
         padding: '120px 5%',
         boxSizing: 'border-box',
       }}
@@ -36,10 +36,10 @@ export const About = () => {
               fontWeight: 700,
               letterSpacing: '0.3em',
               textTransform: 'uppercase',
-              color: 'rgba(255,255,255,0.4)',
+              color: 'rgba(0,0,0,0.35)',
             }}
           >
-            À Propos
+            About
           </span>
         </div>
 
@@ -65,9 +65,9 @@ export const About = () => {
                 margin: 0,
               }}
             >
-              Capturer<br />
-              <span style={{ color: ACCENT }}>l'instant</span><br />
-              juste.
+              Capturing<br />
+              <span style={{ color: ACCENT }}>the right</span><br />
+              moment.
             </h2>
           </div>
 
@@ -83,23 +83,23 @@ export const About = () => {
               style={{
                 fontSize: '1.125rem',
                 lineHeight: 1.8,
-                color: 'rgba(255,255,255,0.75)',
+                color: 'rgba(0,0,0,0.7)',
                 marginBottom: '24px',
                 fontWeight: 400,
               }}
             >
-              Je suis photographe, spécialisée dans les portraits naturels, les shootings éditoriaux et les événements.
+              I am a photographer specializing in natural portraits, editorial shoots, and events.
             </p>
             <p
               style={{
                 fontSize: '1.125rem',
                 lineHeight: 1.8,
-                color: 'rgba(255,255,255,0.5)',
+                color: 'rgba(0,0,0,0.45)',
                 fontWeight: 400,
                 margin: 0,
               }}
             >
-              Je travaille avec des particuliers et des professionnels, en cherchant toujours la lumière et l'authenticité.
+              I work with individuals and professionals, always seeking light and authenticity.
             </p>
           </div>
 
@@ -140,7 +140,7 @@ export const About = () => {
                 padding: '6px 10px',
               }}
             >
-              Éditorial
+              Editorial
             </div>
           </div>
         </div>
