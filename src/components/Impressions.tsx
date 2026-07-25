@@ -1,57 +1,30 @@
-import React from 'react';
+import Link from "next/link";
 
-export const Impressions = () => {
+export function Impressions() {
   return (
-    <section
-      id="impressions"
-      className="resp-section"
-      style={{
-        width: '100%',
-        backgroundColor: '#10069F',
-        color: 'white',
-        padding: '120px 5%',
-        boxSizing: 'border-box',
-      }}
-    >
-      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        {/* Label */}
-        <div className="resp-label-row" style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '64px' }}>
-          <span style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.6)' }}>03</span>
-          <div style={{ height: '1px', width: '48px', backgroundColor: 'rgba(255,255,255,0.4)' }} />
-          <span style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.3em', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.6)' }}>Prints</span>
-        </div>
+    <section className="section prints-teaser" id="prints">
+      <div className="section-label section-label-light">
+        <span>03</span>
+        <i />
+        <span>Prints</span>
+      </div>
 
-        <div
-          className="resp-grid-2"
-          style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
-            gap: '80px',
-            alignItems: 'center',
-          }}
-        >
-          <h2
-            style={{
-              fontSize: 'clamp(2.5rem, 5vw, 5rem)',
-              fontWeight: 700,
-              lineHeight: 1,
-              textTransform: 'uppercase' as const,
-              letterSpacing: '-0.02em',
-              margin: 0,
-            }}
-          >
-            Your photos,<br />printed.
-          </h2>
-          <div>
-            <p style={{ fontSize: '1.25rem', lineHeight: 1.7, color: 'rgba(255,255,255,0.8)', marginBottom: '16px', fontWeight: 400 }}>
-              Photo prints in various formats, on high-quality photo paper.
-            </p>
-            <p style={{ fontSize: '1rem', letterSpacing: '0.15em', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.55)', fontWeight: 700 }}>
-              Order on request
-            </p>
-          </div>
+      <div className="prints-teaser-grid">
+        <h2>
+          Photographs,
+          <br />
+          made tangible.
+        </h2>
+        <div>
+          <p>
+            A selection of Léonie’s photographs, printed to order on archival
+            paper in a choice of formats.
+          </p>
+          <Link className="light-button" href="/prints">
+            View available prints <span aria-hidden="true">↗</span>
+          </Link>
         </div>
       </div>
     </section>
   );
-};
+}
