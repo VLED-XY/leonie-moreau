@@ -7,6 +7,7 @@ import {
   SITE_NAME,
 } from "@/lib/metadata";
 import { StructuredData } from "@/components/StructuredData";
+import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -54,6 +55,7 @@ export default function RootLayout({
       <body>
         <StructuredData />
         {children}
+        <SiteFooter />
       </body>
     </html>
   );
