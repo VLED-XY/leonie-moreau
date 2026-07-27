@@ -18,6 +18,8 @@ export type Service = {
   introduction: string;
   details: string[];
   price: string;
+  /** Entry price in GBP, for schema.org Offer. Keep in sync with `price`. */
+  priceFrom: number;
   priceNote: string;
   images: string[];
 };
@@ -36,6 +38,7 @@ export const services: Service[] = [
       "A curated gallery of fully edited high-resolution images",
     ],
     price: "From £250 / €290",
+    priceFrom: 250,
     priceNote: "Final quote depends on location, duration and image usage.",
     images: [galleryImages[0], galleryImages[4], galleryImages[6]],
   },
@@ -52,6 +55,7 @@ export const services: Service[] = [
       "A private online gallery with print-ready photographs",
     ],
     price: "From £1,450 / €1,690",
+    priceFrom: 1450,
     priceNote: "Elopements and shorter coverage are quoted separately.",
     images: [galleryImages[1], galleryImages[2], galleryImages[8]],
   },
@@ -68,6 +72,7 @@ export const services: Service[] = [
       "A fast-turnaround gallery ready for press, social and print",
     ],
     price: "From £350 / €410",
+    priceFrom: 350,
     priceNote: "Half-day, full-day and recurring brand coverage available.",
     images: [galleryImages[3], galleryImages[5], galleryImages[7]],
   },

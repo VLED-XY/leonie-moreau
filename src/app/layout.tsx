@@ -6,6 +6,7 @@ import {
   DEFAULT_TITLE,
   SITE_NAME,
 } from "@/lib/metadata";
+import { StructuredData } from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -50,7 +51,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <StructuredData />
+        {children}
+      </body>
     </html>
   );
 }
