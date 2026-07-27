@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Léonie Moreau — portfolio
 
-## Getting Started
+Site vitrine d'une photographe basée à Édimbourg et Paris.
+Production : <https://leoniemoreau.com>
 
-First, run the development server:
+## Stack
+
+- **Next.js 16.2.3** (App Router, Turbopack) — versions figées, ne pas mettre à jour sans raison
+- **React 19.2.4**, **TypeScript 5** en mode `strict`
+- **Tailwind CSS 4** pour quelques utilitaires ; l'essentiel du style est écrit à la main dans `src/app/globals.css`
+- **OpenNext + Cloudflare Workers** pour le déploiement
+
+## Démarrer
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Le site tourne sur <http://localhost:3000>.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> **Windows ARM :** `npm ci` échoue dans le postinstall de `workerd`
+> (`Unsupported platform: win32 arm64`). Utiliser
+> `npm ci --ignore-scripts --no-audit --no-fund`. Le déploiement passe par le
+> CI Linux, qui n'est pas concerné.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Commandes
 
-## Learn More
+| Commande | Rôle |
+|---|---|
+| `npm run dev` | Serveur de développement |
+| `npm run build` | Build de production |
+| `npm run lint` | ESLint (`next lint` n'existe plus depuis Next 16) |
+| `npm run typecheck` | `tsc --noEmit` |
+| `npm run preview` | Build OpenNext puis aperçu local dans workerd |
+| `npm run deploy` | Build OpenNext puis déploiement Cloudflare |
 
-To learn more about Next.js, take a look at the following resources:
+## Contenu
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Tout le contenu éditorial — services, tarifs, galeries, prints — vit dans
+`src/data/site.ts`. Ajouter un service dans ce fichier crée automatiquement sa
+page `/services/<slug>` et son entrée de sitemap. Aucun contenu n'est codé en
+dur dans les composants.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Déploiement
 
-## Deploy on Vercel
+Chaque push sur `main` déclenche `.github/workflows/deploy.yml` : lint,
+typecheck et build doivent passer avant le déploiement Cloudflare.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Secrets requis sur le dépôt GitHub : `CLOUDFLARE_API_TOKEN`,
+`CLOUDFLARE_ACCOUNT_ID`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Rendu
+
+Toutes les routes sont statiques ou prérendues (`○` / `●` dans la sortie de
+build). **N'appelez jamais `headers()`, `cookies()` ou `searchParams` dans
+`src/app/layout.tsx`** : une API dynamique dans le layout racine bascule le
+site entier en rendu à la demande et annule `generateStaticParams`.
