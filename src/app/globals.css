@@ -126,6 +126,25 @@ body {
 
 .hero-aside {
   padding-bottom: 8px;
+  animation: hero-fade 700ms ease 350ms backwards;
+}
+
+/* The h1 is the LCP element, so this animates transform only — never opacity.
+   The text paints on the first frame, with no JavaScript involved. */
+.hero-title-wrap {
+  animation: hero-rise 800ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes hero-rise {
+  from {
+    transform: translateY(32px);
+  }
+}
+
+@keyframes hero-fade {
+  from {
+    opacity: 0;
+  }
 }
 
 .hero-index {
