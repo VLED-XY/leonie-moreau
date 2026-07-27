@@ -22,33 +22,11 @@ body {
   overflow-x: hidden;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
   color: var(--ink);
   background: var(--paper);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-}
-
-a {
-  color: inherit;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-button,
-input,
-select,
-textarea {
-  font: inherit;
 }
 
 ::selection {
@@ -626,6 +604,9 @@ textarea {
 .print-meta h2 {
   margin: 0;
   font-size: clamp(1.7rem, 3vw, 3.2rem);
+  /* Preflight resets headings to `font-weight: inherit`. This rule set a size
+     but never a weight, so it relied on the browser's default bold. */
+  font-weight: 700;
   letter-spacing: -0.03em;
   text-transform: uppercase;
 }
