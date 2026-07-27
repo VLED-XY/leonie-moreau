@@ -1,45 +1,41 @@
-﻿import type { Metadata, Viewport } from "next";
-import { headers } from "next/headers";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { SITE_URL } from "@/lib/site-url";
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_TITLE,
+  SITE_NAME,
+} from "@/lib/metadata";
 
-export async function generateMetadata(): Promise<Metadata> {
-  const requestHeaders = await headers();
-  const host = requestHeaders.get("host") ?? "localhost:3000";
-  const protocol =
-    requestHeaders.get("x-forwarded-proto") ??
-    (host.includes("localhost") || host.startsWith("127.0.0.1") ? "http" : "https");
-  const metadataBase = new URL(`${protocol}://${host}`);
-
-  return {
-    metadataBase,
-    title: {
-      default: "Léonie Moreau | Photographer in Edinburgh & Paris",
-      template: "%s | Léonie Moreau",
-    },
-    description:
-      "Editorial photography for weddings, brands and culture in Edinburgh, Paris and beyond.",
-    openGraph: {
-      title: "Léonie Moreau | Photographer in Edinburgh & Paris",
-      description:
-        "Editorial photography for weddings, brands and culture in Edinburgh, Paris and beyond.",
-      images: [
-        {
-          url: "/og.png",
-          width: 1733,
-          height: 907,
-          alt: "Léonie Moreau — Photographer",
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: "Léonie Moreau | Photographer in Edinburgh & Paris",
-      description:
-        "Editorial photography for weddings, brands and culture in Edinburgh, Paris and beyond.",
-      images: ["/og.png"],
-    },
-  };
-}
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: DEFAULT_TITLE,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: DEFAULT_DESCRIPTION,
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    siteName: SITE_NAME,
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: [
+      {
+        url: "/og.png",
+        width: 1734,
+        height: 907,
+        alt: "Léonie Moreau — Photographer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: ["/og.png"],
+  },
+};
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -54,9 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
