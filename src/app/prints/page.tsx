@@ -3,12 +3,14 @@ import Link from "next/link";
 import { BookingForm } from "@/components/BookingForm";
 import { SiteHeader } from "@/components/SiteHeader";
 import { prints } from "@/data/site";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Prints",
   description:
     "Limited photographic prints by Léonie Moreau, produced to order on archival paper.",
-};
+  path: "/prints",
+});
 
 export default function PrintsPage() {
   return (

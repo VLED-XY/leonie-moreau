@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { BookingForm } from "@/components/BookingForm";
 import { SiteHeader } from "@/components/SiteHeader";
 import { services } from "@/data/site";
+import { pageMetadata } from "@/lib/metadata";
 
 export function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));
@@ -14,12 +15,16 @@ export async function generateMetadata({
 }: PageProps<"/services/[slug]">): Promise<Metadata> {
   const { slug } = await params;
   const service = services.find((item) => item.slug === slug);
-  return service
-    ? {
-        title: service.name,
-        description: service.introduction,
-      }
-    : {};
+
+  if (!service) {
+    return {};
+  }
+
+  return pageMetadata({
+    title: service.name,
+    description: service.introduction,
+    path: `/services/${service.slug}`,
+  });
 }
 
 export default async function ServicePage({
