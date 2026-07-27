@@ -8,7 +8,7 @@ export const galleryImages = [
   "https://leonie-moreau.designbykiara.com/DSC_1957.jpg",
   "https://leonie-moreau.designbykiara.com/DSC_7744.JPG",
   "https://leonie-moreau.designbykiara.com/DSC_7854.JPG",
-];
+] as const satisfies readonly string[];
 
 export type Service = {
   slug: string;
