@@ -61,9 +61,15 @@ export default async function ServicePage({
       <section className="detail-gallery" aria-label={`${service.name} gallery`}>
         {service.images.map((image, index) => (
           <figure key={image}>
+            {/* eslint-disable-next-line @next/next/no-img-element -- next/image is deferred pending a Cloudflare Images decision; see docs/superpowers/specs/2026-07-27-remediation-audit-design.md */}
             <img
               src={image}
               alt={`${service.name} photography by Léonie Moreau — ${index + 1}`}
+              width={1200}
+              height={1500}
+              loading={index === 0 ? "eager" : "lazy"}
+              fetchPriority={index === 0 ? "high" : "auto"}
+              decoding="async"
             />
           </figure>
         ))}

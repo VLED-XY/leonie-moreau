@@ -42,7 +42,16 @@ export default function PrintsPage() {
         {prints.map((print, index) => (
           <article className="print-card" key={print.title}>
             <div className="print-image">
-              <img src={print.image} alt={`${print.title} photographic print`} />
+              {/* eslint-disable-next-line @next/next/no-img-element -- next/image is deferred pending a Cloudflare Images decision; see docs/superpowers/specs/2026-07-27-remediation-audit-design.md */}
+              <img
+                src={print.image}
+                alt={`${print.title} photographic print`}
+                width={1200}
+                height={1500}
+                loading={index === 0 ? "eager" : "lazy"}
+                fetchPriority={index === 0 ? "high" : "auto"}
+                decoding="async"
+              />
             </div>
             <div className="print-meta">
               <div>
