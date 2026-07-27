@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --paper: #f7f7f3;
@@ -210,6 +208,10 @@ textarea {
 
 .text-link,
 .back-link {
+  /* Tailwind's Preflight resets `a { text-decoration: inherit }`, so the
+     browser default these links relied on is gone. Stated explicitly here —
+     colour alone would not distinguish them. */
+  text-decoration: underline;
   text-underline-offset: 6px;
   font-size: 10px;
   font-weight: 800;
@@ -777,6 +779,7 @@ textarea {
   *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+    animation-delay: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
 }
