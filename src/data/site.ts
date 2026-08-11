@@ -10,6 +10,8 @@ export const galleryImages = [
   "https://leonie-moreau.designbykiara.com/DSC_7854.JPG",
 ] as const satisfies readonly string[];
 
+export const instagramUrl = "https://www.instagram.com/leoniem.photographer/";
+
 export type Service = {
   slug: string;
   name: string;
@@ -37,8 +39,8 @@ export const services: Service[] = [
       "A relaxed session in Edinburgh, Paris or on location",
       "A curated gallery of fully edited high-resolution images",
     ],
-    price: "From £250 / €290",
-    priceFrom: 250,
+    price: "From £150 / €175",
+    priceFrom: 150,
     priceNote: "Final quote depends on location, duration and image usage.",
     images: [galleryImages[0], galleryImages[4], galleryImages[6]],
   },
@@ -54,8 +56,8 @@ export const services: Service[] = [
       "Coverage from intimate ceremonies to full wedding days",
       "A private online gallery with print-ready photographs",
     ],
-    price: "From £1,450 / €1,690",
-    priceFrom: 1450,
+    price: "From £900 / €1,050",
+    priceFrom: 900,
     priceNote: "Elopements and shorter coverage are quoted separately.",
     images: [galleryImages[1], galleryImages[2], galleryImages[8]],
   },
@@ -71,8 +73,8 @@ export const services: Service[] = [
       "Documentary coverage with polished editorial portraits",
       "A fast-turnaround gallery ready for press, social and print",
     ],
-    price: "From £350 / €410",
-    priceFrom: 350,
+    price: "From £200 / €235",
+    priceFrom: 200,
     priceNote: "Half-day, full-day and recurring brand coverage available.",
     images: [galleryImages[3], galleryImages[5], galleryImages[7]],
   },

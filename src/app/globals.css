@@ -78,6 +78,11 @@ body {
   padding: 11px 18px;
 }
 
+.nav-instagram {
+  border: 1px solid var(--line);
+  padding: 10px 16px;
+}
+
 .hero,
 .page-shell {
   background: var(--white);
@@ -655,12 +660,14 @@ body {
   }
 
   .hero {
-    min-height: auto;
+    min-height: 100svh;
   }
 
   .hero-grid {
-    gap: 55px;
-    padding-top: 100px;
+    align-content: start;
+    gap: 48px;
+    padding-top: clamp(32px, 5vh, 58px);
+    padding-bottom: clamp(48px, 8vh, 78px);
   }
 
   .hero h1 {
@@ -696,11 +703,17 @@ body {
   }
 
   .site-nav {
-    gap: 14px;
+    gap: 8px;
   }
 
-  .site-nav a:not(.nav-book) {
+  .site-nav a:not(.nav-book):not(.nav-instagram) {
     display: none;
+  }
+
+  .nav-instagram,
+  .nav-book {
+    padding: 10px 12px;
+    font-size: 9px !important;
   }
 
   .section {
@@ -708,7 +721,9 @@ body {
   }
 
   .hero-grid {
-    padding: 86px 0 42px;
+    align-content: start;
+    gap: 40px;
+    padding: clamp(24px, 4vh, 36px) 0 clamp(48px, 8vh, 72px);
   }
 
   .hero h1 {
