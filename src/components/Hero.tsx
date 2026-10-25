@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
+import { homeHeroImage } from "@/data/site";
 
 export function Hero() {
   return (
@@ -17,9 +18,16 @@ export function Hero() {
 
         <div className="hero-aside">
           <p className="hero-index">Editorial · Weddings · Events</p>
-          <p className="hero-intro">
-            Honest, artful photography for people, celebrations and culture.
-          </p>
+          <figure className="hero-photo">
+            {/* eslint-disable-next-line @next/next/no-img-element -- static public asset follows the gallery's existing image handling */}
+            <img
+              src={homeHeroImage}
+              alt="Front of a blue vintage car with yellow headlights"
+              width={1600}
+              height={1063}
+              fetchPriority="high"
+            />
+          </figure>
           <div className="hero-actions">
             <Link className="primary-button" href="#contact">
               Book a shoot <span aria-hidden="true">↗</span>

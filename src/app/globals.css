@@ -162,7 +162,19 @@ body {
   text-transform: uppercase;
 }
 
-.hero-intro,
+.hero-photo {
+  margin: 0 0 30px;
+  overflow: hidden;
+}
+
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
 .detail-intro > p {
   max-width: 500px;
   margin: 0 0 34px;
@@ -730,10 +742,18 @@ body {
     font-size: clamp(3.7rem, 21vw, 6.2rem);
   }
 
+  .hero-title-wrap .eyebrow {
+    margin-bottom: 42px;
+  }
+
   .about h2,
   .prints-teaser h2,
   .booking-copy h2 {
     font-size: clamp(2.8rem, 14vw, 4.8rem);
+  }
+
+  .prints-teaser h2 {
+    font-size: clamp(1.85rem, 9vw, 3.5rem);
   }
 
   .about-copy {

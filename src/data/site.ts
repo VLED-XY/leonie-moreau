@@ -1,14 +1,34 @@
-export const galleryImages = [
-  "https://leonie-moreau.designbykiara.com/DSC_1559.jpg",
-  "https://leonie-moreau.designbykiara.com/DSC_2720.jpg",
-  "https://leonie-moreau.designbykiara.com/DSC_2459.jpg",
-  "https://leonie-moreau.designbykiara.com/DSC_3226.jpg",
-  "https://leonie-moreau.designbykiara.com/DSC_3275.jpg",
-  "https://leonie-moreau.designbykiara.com/DSC_4717.jpeg",
-  "https://leonie-moreau.designbykiara.com/DSC_1957.jpg",
-  "https://leonie-moreau.designbykiara.com/DSC_7744.JPG",
-  "https://leonie-moreau.designbykiara.com/DSC_7854.JPG",
-] as const satisfies readonly string[];
+export const homeHeroImage = "/images/home-car.jpg";
+
+const photoShootImages = [
+  "/images/photo-shoot-01.jpg",
+  "/images/photo-shoot-02.jpg",
+  "/images/photo-shoot-03.jpg",
+  "/images/photo-shoot-04.jpg",
+  "/images/photo-shoot-05.jpg",
+  "/images/photo-shoot-06.jpg",
+  "/images/photo-shoot-07.jpg",
+  "/images/photo-shoot-08.jpg",
+  "/images/photo-shoot-09.jpg",
+];
+
+const weddingImages = [
+  "/images/weddings-01.jpg",
+  "/images/weddings-02.jpg",
+  "/images/weddings-03.jpg",
+  "/images/weddings-04.jpg",
+  "/images/weddings-05.jpg",
+  "/images/weddings-06.jpg",
+];
+
+const eventImages = [
+  "/images/events-01.jpg",
+  "/images/events-02.jpg",
+  "/images/events-03.jpg",
+  "/images/events-04.jpg",
+  "/images/events-05.jpg",
+  "/images/events-06.jpg",
+];
 
 export const instagramUrl = "https://www.instagram.com/leoniem.photographer/";
 
@@ -35,14 +55,14 @@ export const services: Service[] = [
     introduction:
       "Relaxed portrait sessions shaped around you, your story and the way you want to be seen.",
     details: [
-      "A preparation call and visual direction",
+      "A collaborative exchange to define the visual concept",
       "A relaxed session in Edinburgh, Paris or on location",
       "A curated gallery of fully edited high-resolution images",
     ],
     price: "From £150 / €175",
     priceFrom: 150,
     priceNote: "Final quote depends on location, duration and image usage.",
-    images: [galleryImages[0], galleryImages[4], galleryImages[6]],
+    images: photoShootImages,
   },
   {
     slug: "weddings",
@@ -59,7 +79,7 @@ export const services: Service[] = [
     price: "From £900 / €1,050",
     priceFrom: 900,
     priceNote: "Elopements and shorter coverage are quoted separately.",
-    images: [galleryImages[1], galleryImages[2], galleryImages[8]],
+    images: weddingImages,
   },
   {
     slug: "events",
@@ -76,39 +96,39 @@ export const services: Service[] = [
     price: "From £200 / €235",
     priceFrom: 200,
     priceNote: "Half-day, full-day and recurring brand coverage available.",
-    images: [galleryImages[3], galleryImages[5], galleryImages[7]],
+    images: eventImages,
   },
 ];
 
 export const prints = [
   {
     title: "Blue Hour",
-    image: galleryImages[0],
+    image: "/images/prints-01.jpg",
     price: "From £65 / €75",
   },
   {
     title: "Afterlight",
-    image: galleryImages[3],
+    image: homeHeroImage,
     price: "From £65 / €75",
   },
   {
     title: "Sunday",
-    image: galleryImages[5],
+    image: "/images/prints-03.jpg",
     price: "From £75 / €85",
   },
   {
     title: "Still Life",
-    image: galleryImages[7],
+    image: "/images/prints-04.jpg",
     price: "From £65 / €75",
   },
   {
     title: "Night Study",
-    image: galleryImages[8],
+    image: "/images/prints-05.jpg",
     price: "From £75 / €85",
   },
   {
     title: "In Motion",
-    image: galleryImages[2],
+    image: "/images/prints-06.jpg",
     price: "From £65 / €75",
   },
 ];
