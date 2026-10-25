@@ -784,6 +784,10 @@ body {
     font-size: clamp(3.3rem, 18vw, 6rem);
   }
 
+  .prints-hero h1 {
+    font-size: clamp(2rem, 12.5vw, 5rem);
+  }
+
   .detail-gallery {
     grid-template-columns: 1fr;
   }
