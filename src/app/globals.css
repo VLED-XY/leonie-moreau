@@ -456,6 +456,23 @@ body {
   align-self: flex-start;
 }
 
+.booking-form .primary-button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.booking-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.form-note.form-error {
+  color: #9b2525;
+}
+
 .form-note {
   max-width: 620px;
   margin: 0;

@@ -3,6 +3,7 @@ name: Deploy to Cloudflare Workers
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 env:
   NEXT_PUBLIC_SITE_URL: https://leoniemoreau.com
@@ -27,12 +28,18 @@ jobs:
       - name: Type-check
         run: npm run typecheck
 
+      - name: Test booking delivery
+        run: npm test
+
       - name: Build
         run: npm run build
 
   deploy:
     needs: verify
     runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
     steps:
       - uses: actions/checkout@v4
 
@@ -44,8 +51,23 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build & Deploy
-        run: npm run deploy
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      - name: Build Cloudflare worker
+        run: ./node_modules/.bin/opennextjs-cloudflare build
+
+      - name: Package Cloudflare build
+        run: tar -czf cloudflare-build.tar.gz .open-next
+
+      - name: Save deployable build
+        uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-build
+          path: cloudflare-build.tar.gz
+          retention-days: 7
+
+      - name: Deploy to Cloudflare
+        if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
+        run: ./node_modules/.bin/opennextjs-cloudflare deploy
+
+      - name: Report manual deployment requirement
+        if: env.CLOUDFLARE_API_TOKEN == '' || env.CLOUDFLARE_ACCOUNT_ID == ''
+        run: echo '::warning::Cloudflare credentials are missing. Download cloudflare-build and deploy it with an authenticated Wrangler session.'

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BookingForm } from "@/components/BookingForm";
 import { SiteHeader } from "@/components/SiteHeader";
-import { prints } from "@/data/site";
+import { printEnquiryService, prints } from "@/data/site";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = pageMetadata({
@@ -87,7 +87,7 @@ export default function PrintsPage() {
 
       <div className="section detail-booking" id="order">
         <BookingForm
-          defaultService="Print order"
+          defaultService={printEnquiryService}
           title="Order a print."
           intro="Tell me which photograph and size you would like. I’ll confirm availability, production time and delivery."
         />

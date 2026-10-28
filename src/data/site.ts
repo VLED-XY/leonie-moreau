@@ -32,6 +32,8 @@ const eventImages = [
 
 export const instagramUrl = "https://www.instagram.com/leoniem.photographer/";
 
+export const printEnquiryService = "Print order";
+
 export type Service = {
   slug: string;
   name: string;

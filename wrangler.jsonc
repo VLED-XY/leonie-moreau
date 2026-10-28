@@ -1,7 +1,12 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "leonie-moreau",
-  "main": ".open-next/worker.js",
+  "routes": [
+    { "pattern": "leoniemoreau.com", "custom_domain": true },
+    { "pattern": "www.leoniemoreau.com", "custom_domain": true },
+    { "pattern": "leonie.designbykiara.com", "custom_domain": true }
+  ],
+  "main": "worker.mjs",
   "compatibility_date": "2026-04-27",
   "compatibility_flags": [
     "nodejs_compat",
@@ -11,6 +16,18 @@
     "binding": "ASSETS",
     "directory": ".open-next/assets"
   },
+  "ratelimits": [
+    {
+      "name": "BOOKING_RATE_LIMITER",
+      "namespace_id": "2026102801",
+      "simple": { "limit": 5, "period": 60 }
+    },
+    {
+      "name": "BOOKING_GLOBAL_LIMITER",
+      "namespace_id": "2026102802",
+      "simple": { "limit": 30, "period": 60 }
+    }
+  ],
   "observability": {
     "enabled": true
   }

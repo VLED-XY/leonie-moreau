@@ -41,6 +41,8 @@ export default function PrivacyPage() {
             The booking form asks for your name, email address, the service you
             are interested in, an optional date and location, and your message.
             These details are used to answer your enquiry and for nothing else.
+            {" "}Messages are sent securely through Resend to the photographer’s
+            inbox. Your email address is used to reply to you.
           </p>
           <p>
             This website sets no analytics and no advertising cookies. It is
